@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { ContactBand } from "../components/ContactBand";
 import hero from "../assets/hero.m4v.asset.json";
+import heroPoster from "../assets/hero-poster.jpg.asset.json";
 import efficiency from "../assets/efficiency.png.asset.json";
 import storage from "../assets/storage.png.asset.json";
 import photovoltaic from "../assets/photovoltaic.png.asset.json";
@@ -42,7 +43,7 @@ function HomePage() {
     <main>
       <section className="hero">
         <div className="hero-copy"><div className="hero-copy-inner"><h1>Empowering<br />Energy</h1><p>Driving forward Romania's energy sector through strategic consulting, seamless project approvals, cutting-edge engineering, skilled construction, and dedicated maintenance.</p><Link to="/services" className="primary-light">Explore Services</Link></div></div>
-        <div className="hero-media"><video src={hero.url} autoPlay muted loop playsInline aria-label="Aerial view of solar panels" /></div>
+        <div className="hero-media"><video src={hero.url} poster={heroPoster.url} autoPlay muted loop playsInline aria-label="Aerial view of solar panels" /></div>
       </section>
       <section className="expertise section-dark">
         <div className="shell expertise-header"><h2>Areas of<br />Expertise</h2><p>Whether for small or large-scale projects, we are committed to delivering cutting-edge results, contributing to a more sustainable and innovative energy future.</p></div>
