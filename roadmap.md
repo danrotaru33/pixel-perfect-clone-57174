@@ -10,4 +10,4 @@
 - [x] Add Casa Verde navigation and page
 - [x] Implement AFM funding and score calculator
 - [x] Add eligibility, process, and document guidance
-- [ ] Verify Casa Verde on desktop/mobile and confirm clean logs
+- [x] Verify Casa Verde on desktop/mobile and confirm clean logs
