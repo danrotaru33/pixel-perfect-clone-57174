@@ -7,7 +7,7 @@
 - [x] Verify desktop/mobile rendering and interactions
 - [x] Confirm clean build and runtime logs
 
-- [ ] Add Casa Verde navigation and page
-- [ ] Implement AFM funding and score calculator
-- [ ] Add eligibility, process, and document guidance
-- [ ] Verify Casa Verde on desktop/mobile and confirm clean logs
+- [x] Add Casa Verde navigation and page
+- [x] Implement AFM funding and score calculator
+- [x] Add eligibility, process, and document guidance
+- [x] Verify Casa Verde on desktop/mobile and confirm clean logs

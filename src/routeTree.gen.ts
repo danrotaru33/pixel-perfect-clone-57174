@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as CasaVerdeRouteImport } from './routes/casa-verde'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as ServicesRouteImport } from './routes/services'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasaVerdeRoute = CasaVerdeRouteImport.update({
+  id: '/casa-verde',
+  path: '/casa-verde',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactUsRoute = ContactUsRouteImport.update({
@@ -38,12 +44,14 @@ const ServicesRoute = ServicesRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/casa-verde': typeof CasaVerdeRoute
   '/contact-us': typeof ContactUsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/casa-verde': typeof CasaVerdeRoute
   '/contact-us': typeof ContactUsRoute
   '/services': typeof ServicesRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/casa-verde': typeof CasaVerdeRoute
   '/contact-us': typeof ContactUsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact-us' | '/services'
+  fullPaths: '/' | '/about' | '/casa-verde' | '/contact-us' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact-us' | '/services'
-  id: '__root__' | '/' | '/about' | '/contact-us' | '/services'
+  to: '/' | '/about' | '/casa-verde' | '/contact-us' | '/services'
+  id: '__root__' | '/' | '/about' | '/casa-verde' | '/contact-us' | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CasaVerdeRoute: typeof CasaVerdeRoute
   ContactUsRoute: typeof ContactUsRoute
   ServicesRoute: typeof ServicesRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casa-verde': {
+      id: '/casa-verde'
+      path: '/casa-verde'
+      fullPath: '/casa-verde'
+      preLoaderRoute: typeof CasaVerdeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact-us': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CasaVerdeRoute: CasaVerdeRoute,
   ContactUsRoute: ContactUsRoute,
   ServicesRoute: ServicesRoute,
 }
