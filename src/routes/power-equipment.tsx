@@ -6,7 +6,6 @@ import highVoltageTransformer from "../assets/high-voltage-transformer.jpg.asset
 import substationTransformer from "../assets/substation-transformer.jpg.asset.json";
 import distributionTransformer from "../assets/distribution-transformer.jpg.asset.json";
 import dryTypeTransformer from "../assets/dry-type-transformer.jpg.asset.json";
-import energyStorageSite from "../assets/energy-storage-site.jpg.asset.json";
 import projectBulgaria from "../assets/project-bulgaria.jpg.asset.json";
 import projectUk1 from "../assets/project-uk-1.jpg.asset.json";
 import projectUk2 from "../assets/project-uk-2.jpg.asset.json";
@@ -96,24 +95,8 @@ function PowerEquipmentPage() {
           </div>
         </section>
 
-        <section className="pe-storage">
-          <div className="pe-storage-text">
-            <span className="pe-label">Energy Storage</span>
-            <h2>Integrated medium-voltage skids</h2>
-            <p>Power conversion, transformer and switchgear in a single container, pre-assembled and tested before delivery to reduce time and labour on site.</p>
-            <ul>
-              <li>Peak shaving, frequency regulation and black start</li>
-              <li>Conversion efficiency above 99%</li>
-              <li>Plug-and-play integration with energy management systems</li>
-            </ul>
-            <a href="#request-a-quote" className="primary-light">Request a quote</a>
-          </div>
-          <div className="pe-storage-media">
-            <img src={energyStorageSite.url} alt="Containerized battery energy storage plant" loading="lazy" />
-          </div>
-        </section>
 
-        <section className="pe-references">
+        <section className="pe-references section-dark">
           <div className="shell">
             <span className="pe-label">Reference projects</span>
             <h2>Installed at grid-scale storage plants</h2>
