@@ -11,3 +11,6 @@
 - [x] Implement AFM funding and score calculator
 - [x] Add eligibility, process, and document guidance
 - [x] Verify Casa Verde on desktop/mobile and confirm clean logs
+
+- [x] Rebuild the footer to match the reference (no round buttons)
+- [x] Add Privacy Policy page and verify footer on desktop/mobile

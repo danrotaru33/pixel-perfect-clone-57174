@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { ContactBand } from "../components/ContactBand";
+import { SiteFooter } from "../components/SiteFooter";
 import hero from "../assets/hero.m4v.asset.json";
 import heroPoster from "../assets/hero-poster.jpg.asset.json";
 import efficiency from "../assets/efficiency.png.asset.json";
@@ -55,6 +56,6 @@ function HomePage() {
       <section className="process"><div className="shell">{steps.map((step) => <article className="process-step" key={step.n}><div className="step-number">{step.n}</div><div><p className="step-kicker">{step.label}</p><h3>{step.title}</h3></div><div className="process-card"><img src={step.image} alt="" /><h4>{step.name}</h4><p>{step.body}</p></div></article>)}</div></section>
       <ContactBand />
     </main>
-    <footer className="footer"><div className="shell footer-inner"><span>© SENCON 2026</span><span>Romania, Brașov, Nicolae Bălcescu 58</span></div></footer>
+    <SiteFooter />
   </>;
 }
