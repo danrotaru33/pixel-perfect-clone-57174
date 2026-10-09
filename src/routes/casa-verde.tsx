@@ -1,11 +1,15 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { BatteryCharging, Check, FileText, ShieldCheck, Zap } from "lucide-react";
 import { CasaVerdeCalculator } from "../components/CasaVerdeCalculator";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
+import { SHOW_CASA_VERDE } from "../lib/site-flags";
 import storage from "../assets/storage.png.asset.json";
 
 export const Route = createFileRoute("/casa-verde")({
+  beforeLoad: () => {
+    if (!SHOW_CASA_VERDE) throw redirect({ to: "/" });
+  },
   head: () => ({
     meta: [
       { title: "Casa Verde Baterii 2026 — SENCON" },

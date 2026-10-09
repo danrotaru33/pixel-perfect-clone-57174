@@ -14,3 +14,4 @@
 
 - [x] Rebuild the footer to match the reference (no round buttons)
 - [x] Add Privacy Policy page and verify footer on desktop/mobile
+- [x] Hide Casa Verde from menus and its address until it is ready
