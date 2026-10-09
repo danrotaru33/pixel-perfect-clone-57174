@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { SHOW_CASA_VERDE } from "@/lib/site-flags";
+import { SHOW_CASA_VERDE } from "../lib/site-flags";
 
 export function SiteHeader({ inverse = false }: { inverse?: boolean }) {
   const [open, setOpen] = useState(false);

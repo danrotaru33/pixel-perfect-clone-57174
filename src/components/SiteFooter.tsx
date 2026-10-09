@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { SHOW_CASA_VERDE } from "../lib/site-flags";
 
 export function SiteFooter() {
   return (
