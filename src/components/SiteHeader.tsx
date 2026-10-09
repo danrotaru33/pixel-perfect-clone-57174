@@ -3,12 +3,14 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { SHOW_CASA_VERDE } from "../lib/site-flags";
 
-export function SiteHeader({ inverse = false }: { inverse?: boolean }) {
+export function SiteHeader({ inverse = false, logoImage }: { inverse?: boolean; logoImage?: string }) {
   const [open, setOpen] = useState(false);
   return (
     <header className={`site-header ${inverse ? "site-header-inverse" : ""}`}>
       <div className="site-nav">
-        <Link to="/" className="wordmark" aria-label="SENCON home">SENCON</Link>
+        <Link to="/" className={`wordmark ${logoImage ? "wordmark-img" : ""}`} aria-label="SENCON home">
+          {logoImage ? <img src={logoImage} alt="SENCON" /> : "SENCON"}
+        </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
           <Link to="/about" activeProps={{ className: "nav-active" }}>About us</Link>
           <Link to="/services" activeProps={{ className: "nav-active" }}>Services</Link>
