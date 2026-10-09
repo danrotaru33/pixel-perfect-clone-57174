@@ -12,7 +12,7 @@ export function SiteFooter() {
               <Link to="/">Home</Link><span aria-hidden="true">/</span>
               <Link to="/about">About</Link><span aria-hidden="true">/</span>
               <Link to="/services">Services</Link><span aria-hidden="true">/</span>
-              <Link to="/casa-verde">Casa Verde</Link>
+              {SHOW_CASA_VERDE && <Link to="/casa-verde">Casa Verde</Link>}
             </nav>
             <div className="site-footer-block">
               <span className="site-footer-label">Email</span>

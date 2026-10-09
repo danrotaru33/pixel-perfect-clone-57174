@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { SHOW_CASA_VERDE } from "@/lib/site-flags";
 
 export function SiteHeader({ inverse = false }: { inverse?: boolean }) {
   const [open, setOpen] = useState(false);
@@ -11,7 +12,7 @@ export function SiteHeader({ inverse = false }: { inverse?: boolean }) {
         <nav className="desktop-nav" aria-label="Main navigation">
           <Link to="/about" activeProps={{ className: "nav-active" }}>About us</Link>
           <Link to="/services" activeProps={{ className: "nav-active" }}>Services</Link>
-          <Link to="/casa-verde" activeProps={{ className: "nav-active" }}>Casa Verde</Link>
+          {SHOW_CASA_VERDE && <Link to="/casa-verde" activeProps={{ className: "nav-active" }}>Casa Verde</Link>}
           <Link to="/contact-us" className="contact-pill">Contact us</Link>
         </nav>
         <button className="menu-button" onClick={() => setOpen((value) => !value)} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open}>
@@ -22,7 +23,7 @@ export function SiteHeader({ inverse = false }: { inverse?: boolean }) {
         <nav className="mobile-nav" aria-label="Mobile navigation">
           <Link to="/about" onClick={() => setOpen(false)}>About us</Link>
           <Link to="/services" onClick={() => setOpen(false)}>Services</Link>
-          <Link to="/casa-verde" onClick={() => setOpen(false)}>Casa Verde</Link>
+          {SHOW_CASA_VERDE && <Link to="/casa-verde" onClick={() => setOpen(false)}>Casa Verde</Link>}
           <Link to="/contact-us" onClick={() => setOpen(false)}>Contact us</Link>
         </nav>
       )}
