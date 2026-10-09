@@ -48,7 +48,8 @@ button { color: inherit; }
 .mobile-nav a { padding: 16px 18px; border-bottom: 1px solid var(--border); }
 .mobile-nav a:last-child { border-bottom: 0; }
 
-.hero { min-height: 768px; display: grid; grid-template-columns: 1fr 1fr; background: var(--primary); color: var(--primary-foreground); }
+.hero { position: relative; min-height: 768px; display: grid; grid-template-columns: 1fr 1fr; background: var(--primary); color: var(--primary-foreground); }
+.hero::after { content: ""; position: absolute; inset: 0 0 auto; height: 210px; background: linear-gradient(to bottom, oklch(0 0 0 / .8) 0%, oklch(0 0 0 / 0) 100%); pointer-events: none; z-index: 5; }
 .hero-copy { display: flex; align-items: flex-end; justify-content: flex-end; padding: 0 54px 82px 24px; }
 .hero-copy-inner { width: min(440px, 100%); }
 .hero h1 { margin: 0; font-size: 48px; line-height: 1.15; font-weight: 500; max-width: 330px; }
