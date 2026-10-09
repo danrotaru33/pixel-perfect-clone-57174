@@ -41,7 +41,7 @@ async function send(templateName: string, data: Record<string, string>, replyTo:
 }
 
 export const submitContactForm = createServerFn({ method: 'POST' })
-  .inputValidator((data: { name: string; email: string; message: string; website?: string; submissionId?: string }) => data)
+  .validator((data: { name: string; email: string; message: string; website?: string; submissionId?: string }) => data)
   .handler(async ({ data }) => {
     // Honeypot: bots fill the hidden "website" field — pretend success.
     if (data.website) return { ok: true }
@@ -65,7 +65,7 @@ export const submitContactForm = createServerFn({ method: 'POST' })
   })
 
 export const submitQuoteRequest = createServerFn({ method: 'POST' })
-  .inputValidator((data: {
+  .validator((data: {
     name: string
     company?: string
     email: string
