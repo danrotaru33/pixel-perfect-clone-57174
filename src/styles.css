@@ -238,7 +238,7 @@ button { color: inherit; }
   .contact-image { height: 480px; }
   .site-footer { padding: 58px 0 30px; }
   .site-footer-top { grid-template-columns: 1fr; }
-  .site-footer-links { flex-wrap: wrap; gap: 12px; }
+  .site-footer-links { flex-wrap: wrap; gap: 12px; margin-top: 22px; }
   .site-footer-links span { display: none; }
   .site-footer-cta { height: auto; margin-top: 34px; }
   .site-footer-block { margin-top: 30px; }
