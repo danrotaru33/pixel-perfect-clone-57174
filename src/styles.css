@@ -237,9 +237,10 @@ button { color: inherit; }
   .contact-content { padding: 62px 0 80px; }
   .contact-image { height: 480px; }
   .site-footer { padding: 58px 0 30px; }
-  .site-footer-top { grid-template-columns: 1fr 1fr; column-gap: 26px; }
-  .site-footer-brand { grid-column: 1 / -1; }
-  .site-footer-cta { grid-column: 1 / -1; height: auto; margin-top: 34px; }
+  .site-footer-top { grid-template-columns: 1fr; }
+  .site-footer-links { flex-wrap: wrap; gap: 12px; }
+  .site-footer-links span { display: none; }
+  .site-footer-cta { height: auto; margin-top: 34px; }
   .site-footer-block { margin-top: 30px; }
   .site-footer-bottom { flex-direction: column; gap: 10px; margin-top: 52px; }
   .cv-hero, .cv-hero-inner { min-height: 690px; }
