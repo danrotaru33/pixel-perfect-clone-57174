@@ -236,7 +236,12 @@ button { color: inherit; }
   .services-image { margin-top: 70px; }
   .contact-content { padding: 62px 0 80px; }
   .contact-image { height: 480px; }
-  .footer-inner { gap: 24px; flex-direction: column; }
+  .site-footer { padding: 58px 0 30px; }
+  .site-footer-top { grid-template-columns: 1fr 1fr; column-gap: 26px; }
+  .site-footer-brand { grid-column: 1 / -1; }
+  .site-footer-cta { grid-column: 1 / -1; height: auto; margin-top: 34px; }
+  .site-footer-block { margin-top: 30px; }
+  .site-footer-bottom { flex-direction: column; gap: 10px; margin-top: 52px; }
   .cv-hero, .cv-hero-inner { min-height: 690px; }
   .cv-hero::after { background: linear-gradient(0deg, oklch(0 0 0 / .86) 0%, oklch(0 0 0 / .14) 80%); }
   .cv-hero-inner { padding-bottom: 52px; }

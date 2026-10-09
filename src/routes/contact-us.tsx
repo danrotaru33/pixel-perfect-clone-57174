@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FormEvent, useState } from "react";
 import { SiteHeader } from "../components/SiteHeader";
+import { SiteFooter } from "../components/SiteFooter";
 import office from "../assets/contact-office.png.asset.json";
 
 export const Route = createFileRoute("/contact-us")({

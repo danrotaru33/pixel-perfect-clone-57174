@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { ContactBand } from "../components/ContactBand";
+import { SiteFooter } from "../components/SiteFooter";
 import hero from "../assets/hero.m4v.asset.json";
 import heroPoster from "../assets/hero-poster.jpg.asset.json";
 import efficiency from "../assets/efficiency.png.asset.json";

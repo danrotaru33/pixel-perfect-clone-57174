@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { ServicesAccordion } from "../components/ServicesAccordion";
+import { SiteFooter } from "../components/SiteFooter";
 import cta from "../assets/services-cta.jpg.asset.json";
 
 export const Route = createFileRoute("/services")({

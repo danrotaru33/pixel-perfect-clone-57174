@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { ContactBand } from "../components/ContactBand";
+import { SiteFooter } from "../components/SiteFooter";
 import mainImage from "../assets/about-main.jpg.asset.json";
 import secondaryImage from "../assets/about-secondary.png.asset.json";
 

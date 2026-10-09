@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { BatteryCharging, Check, FileText, ShieldCheck, Zap } from "lucide-react";
 import { CasaVerdeCalculator } from "../components/CasaVerdeCalculator";
 import { SiteHeader } from "../components/SiteHeader";
+import { SiteFooter } from "../components/SiteFooter";
 import storage from "../assets/storage.png.asset.json";
 
 export const Route = createFileRoute("/casa-verde")({
