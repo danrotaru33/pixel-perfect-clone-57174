@@ -117,12 +117,12 @@ button { color: inherit; }
 .site-footer-top { display: grid; grid-template-columns: 1.1fr 1fr 1fr auto; column-gap: 48px; align-items: start; }
 .site-footer-brand { font-weight: 200; font-size: 32px; line-height: 1; color: var(--primary-foreground); }
 .site-footer-links { display: flex; flex-wrap: nowrap; align-items: center; gap: 13px; font-size: 14px; }
-.site-footer-links span { color: var(--footer-muted); }
-.site-footer-links a { transition: opacity .2s ease; }
+.site-footer-links span { color: var(--footer-muted); flex-shrink: 0; }
+.site-footer-links a { transition: opacity .2s ease; white-space: nowrap; flex-shrink: 0; }
 .site-footer-links a:hover { opacity: .55; }
 .site-footer-block { margin-top: 46px; }
 .site-footer-label { display: block; margin-bottom: 11px; color: var(--footer-muted); font-size: 13px; }
-.site-footer-value { display: block; color: var(--primary-foreground); font-size: 16px; font-weight: 500; }
+.site-footer-value { display: block; color: var(--primary-foreground); font-size: 16px; font-weight: 500; white-space: nowrap; }
 .site-footer-value + .site-footer-value { margin-top: 9px; }
 .site-footer-cta { display: flex; align-items: center; height: 20px; }
 .site-footer-pill { padding: 14px 31px; border-radius: 999px; background: var(--primary-foreground); color: var(--primary); font-size: 14px; white-space: nowrap; transition: opacity .2s ease; }
