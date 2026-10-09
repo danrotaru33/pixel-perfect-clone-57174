@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { SiteHeader } from "../components/SiteHeader";
+import { submitQuoteRequest } from "../lib/forms.functions";
 import { SiteFooter } from "../components/SiteFooter";
 import highVoltageTransformer from "../assets/high-voltage-transformer.jpg.asset.json";
 import substationTransformer from "../assets/substation-transformer.jpg.asset.json";
@@ -62,8 +63,30 @@ const references = [
 ] as const;
 
 function PowerEquipmentPage() {
-  const [sent, setSent] = useState(false);
-  const submit = (event: FormEvent<HTMLFormElement>) => { event.preventDefault(); setSent(true); };
+  const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const submissionId = useRef(crypto.randomUUID());
+  const submit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (state === "sending") return;
+    setState("sending");
+    const data = new FormData(event.currentTarget);
+    try {
+      await submitQuoteRequest({ data: {
+        name: String(data.get("name") ?? ""),
+        company: String(data.get("company") ?? ""),
+        email: String(data.get("email") ?? ""),
+        phone: String(data.get("phone") ?? ""),
+        product: String(data.get("product") ?? ""),
+        details: String(data.get("details") ?? ""),
+        website: String(data.get("website") ?? ""),
+        submissionId: submissionId.current,
+      } });
+      setState("sent");
+      submissionId.current = crypto.randomUUID();
+    } catch {
+      setState("error");
+    }
+  };
   return (
     <>
       <SiteHeader inverse />
@@ -131,8 +154,10 @@ function PowerEquipmentPage() {
                 </select>
               </label>
               <label className="field">Project details<textarea name="details" placeholder="Rated power, voltage levels, location, timeline" maxLength={1000} /></label>
-              <button className="submit-button" type="submit">{sent ? "Request sent" : "Send request"}</button>
-              {sent && <p aria-live="polite">Thank you, we will be in touch shortly.</p>}
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" style={{ position: "absolute", left: "-9999px" }} aria-hidden="true" />
+              <button className="submit-button" type="submit" disabled={state === "sending"}>{state === "sending" ? "Sending…" : state === "sent" ? "Request sent" : "Send request"}</button>
+              {state === "sent" && <p aria-live="polite">Thank you, we will be in touch shortly.</p>}
+              {state === "error" && <p aria-live="polite">Something went wrong. Please try again or email us at office@sencon.ro.</p>}
             </form>
           </div>
         </section>
