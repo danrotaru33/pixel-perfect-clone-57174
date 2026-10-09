@@ -7,6 +7,7 @@ const services = [
   ["Engineering", "Each project starts with a detailed analysis of the location, solar conditions and specific requirements of the client. We design an optimized photovoltaic solution that maximizes energy efficiency and return on investment."],
   ["Construction", "Managing your entire construction process, blending tailored solutions, quality materials, and advanced methods. We ensure on-time, compliant, cost-effective builds that become efficient, long-lasting assets."],
   ["Operations & Maintenance", "Daily preparation of the production forecast. Daily notifications to the regional distributor and PRE. Maintaining contracts and reporting to A.N.R.E. according to applicable procedures."],
+  ["Power Transformers & Energy Storage Equipment", "We can supply transformers from 10 kV to 500 kV and integrated medium-voltage skids for battery energy storage."],
 ] as const;
 
 export function ServicesAccordion() {
