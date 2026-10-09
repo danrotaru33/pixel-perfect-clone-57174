@@ -43,7 +43,7 @@ function ContactNotification({ name, email, message }: ContactNotificationProps)
 
 export const template = {
   component: ContactNotification,
-  subject: (data: Record<string, any>) => `Website contact: ${data.name ?? 'New message'}`,
+  subject: (data: Record<string, any>) => `Website contact: ${data['name'] ?? 'New message'}`,
   displayName: 'Contact form notification',
   to: 'office@sencon.ro',
   previewData: {

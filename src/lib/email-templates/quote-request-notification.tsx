@@ -55,7 +55,7 @@ function QuoteRequestNotification({ name, company, email, phone, product, detail
 
 export const template = {
   component: QuoteRequestNotification,
-  subject: (data: Record<string, any>) => `Quote request: ${data.product ?? 'Power equipment'} — ${data.name ?? 'New request'}`,
+  subject: (data: Record<string, any>) => `Quote request: ${data['product'] ?? 'Power equipment'} — ${data['name'] ?? 'New request'}`,
   displayName: 'Quote request notification',
   to: 'office@sencon.ro',
   previewData: {

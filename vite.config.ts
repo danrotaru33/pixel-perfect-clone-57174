@@ -11,7 +11,7 @@ import path from "path";
 // Load ALL env vars (not just VITE_*) into process.env so server routes and
 // server functions can read secrets like LOVABLE_API_KEY. Never expose these
 // through envDefine — that would leak them into the client bundle.
-const serverEnv = loadEnv(process.env.NODE_ENV ?? "development", process.cwd(), "");
+const serverEnv = loadEnv(process.env["NODE_ENV"] ?? "development", process.cwd(), "");
 Object.assign(process.env, serverEnv);
 
 export default defineConfig({
