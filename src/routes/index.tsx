@@ -54,6 +54,7 @@ function HomePage() {
       <img className="office-feature" src={office.url} alt="SENCON office building" />
       <section className="shell intro-split"><h2>Knowledge, Connections and Expertise.</h2><div><p>Our extensive experience and activity in the energy sector have positioned us as experts in the industry. Our team's profound understanding enables us to provide innovative, tailored solutions that save you time and capital.</p><Link to="/about" className="arrow-link">Learn more <span>→</span></Link></div></section>
       <section className="process"><div className="shell">{steps.map((step) => <article className="process-step" key={step.n}><div className="step-number">{step.n}</div><div><p className="step-kicker">{step.label}</p><h3>{step.title}</h3></div><div className="process-card"><img src={step.image} alt="" /><h4>{step.name}</h4><p>{step.body}</p></div></article>)}</div></section>
+      <section className="pe-teaser"><div className="shell"><h2>Power Transformers &amp; Energy Storage Equipment</h2><p>Transformers up to 500 kV and energy storage skids, available on request.</p><Link to="/power-equipment" className="pill-dark">Request a quote</Link></div></section>
       <ContactBand />
     </main>
     <SiteFooter />
