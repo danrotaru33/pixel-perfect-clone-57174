@@ -22,6 +22,7 @@
   --primary: oklch(0 0 0);
   --primary-foreground: oklch(1 0 0);
   --footer-muted: oklch(.62 0 0);
+  --on-dark-muted: oklch(.72 0 0);
 }
 
 * { box-sizing: border-box; border-color: var(--border); }
@@ -137,8 +138,8 @@ button { color: inherit; }
 .pe-reference img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
 .pe-reference figcaption { margin-top: 16px; display: grid; gap: 4px; }
 .pe-reference strong { font-size: 16px; font-weight: 500; }
-.pe-reference figcaption span { color: var(--footer-muted); font-size: 14px; }
-.pe-references .pe-label { color: var(--footer-muted); }
+.pe-reference figcaption span { color: var(--on-dark-muted); font-size: 14px; }
+.pe-references .pe-label { color: var(--on-dark-muted); }
 .pe-references .pe-reference img { border: 1px solid oklch(.28 0 0); }
 .pe-quote { padding: 100px 0 120px; background: var(--muted); }
 .pe-quote h2 { margin: 0 0 20px; font-size: 38px; font-weight: 500; line-height: 1.15; }
