@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { ContactBand } from "../components/ContactBand";
 import { SiteFooter } from "../components/SiteFooter";
+import senconLogo from "../assets/sencon-logo-white.png.asset.json";
 import hero from "../assets/hero.m4v.asset.json";
 import heroPoster from "../assets/hero-poster.jpg.asset.json";
 import efficiency from "../assets/efficiency.png.asset.json";
@@ -40,7 +41,7 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   return <>
-    <SiteHeader inverse />
+    <SiteHeader inverse logoImage={senconLogo.url} />
     <main>
       <section className="hero">
         <div className="hero-copy"><div className="hero-copy-inner"><h1>Empowering<br />Energy</h1><p>Driving forward Romania's energy sector through strategic consulting, seamless project approvals, cutting-edge engineering, skilled construction, and dedicated maintenance.</p><Link to="/services" className="primary-light">Explore Services</Link></div></div>

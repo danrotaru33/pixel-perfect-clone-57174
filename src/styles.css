@@ -36,6 +36,8 @@ button { color: inherit; }
 .site-header-inverse { color: var(--primary-foreground); }
 .site-nav { width: min(1040px, calc(100% - 48px)); height: 92px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; }
 .wordmark { font-weight: 200; font-size: 29px; line-height: 1; color: var(--muted-foreground); }
+.wordmark-img { display: inline-flex; align-items: center; }
+.wordmark-img img { height: 21px; width: auto; display: block; }
 .desktop-nav { display: flex; align-items: center; gap: 30px; font-size: 14px; }
 .desktop-nav a:not(.contact-pill) { transition: opacity .2s ease; }
 .desktop-nav a:not(.contact-pill):hover, .nav-active { opacity: .55; }
