@@ -81,7 +81,7 @@ button { color: inherit; }
 .contact-band-inner { display: grid; grid-template-columns: .8fr 1.2fr; gap: 110px; }
 .contact-band p { color: oklch(.76 0 0); margin: 0 0 32px; line-height: 1.6; }
 
-.page-hero { min-height: 430px; display: flex; align-items: flex-end; padding-bottom: 48px; background: var(--muted); }
+.page-hero { min-height: 430px; display: flex; align-items: flex-end; padding-top: 120px; padding-bottom: 48px; background: var(--muted); }
 .page-hero.dark { background: var(--primary); color: var(--primary-foreground); }
 .page-hero h1 { font-size: 46px; font-weight: 500; margin: 0 0 24px; }
 .page-hero p { color: var(--muted-foreground); line-height: 1.55; max-width: 440px; margin: 0; }
@@ -113,6 +113,23 @@ button { color: inherit; }
 .field textarea { min-height: 110px; resize: vertical; border-radius: 20px; }
 .submit-button { border: 0; background: var(--primary); color: var(--primary-foreground); border-radius: 8px; padding: 14px; cursor: pointer; }
 .contact-image { width: 100%; height: 620px; object-fit: cover; object-position: center 42%; }
+.hero-cta { margin-top: 34px; }
+.pill-dark { display: inline-flex; border-radius: 999px; padding: 14px 30px; background: var(--primary); color: var(--primary-foreground); font-size: 14px; transition: opacity .2s ease; }
+.pill-dark:hover { opacity: .8; }
+.pe-teaser { padding: 110px 0; }
+.pe-teaser h2 { margin: 0; font-size: 38px; font-weight: 500; line-height: 1.15; max-width: 560px; }
+.pe-teaser p { margin: 24px 0 34px; color: var(--muted-foreground); line-height: 1.55; max-width: 440px; }
+.pe-products { padding: 100px 0 110px; }
+.pe-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.pe-card { border: 1px solid var(--border); padding: 44px 38px 50px; }
+.pe-card svg { width: 28px; height: 28px; stroke-width: 1.2; margin-bottom: 60px; }
+.pe-card h2 { margin: 0 0 16px; font-size: 24px; font-weight: 500; }
+.pe-card p { margin: 0; color: var(--muted-foreground); line-height: 1.6; }
+.pe-quote { padding: 100px 0 120px; background: var(--muted); }
+.pe-quote h2 { margin: 0 0 20px; font-size: 38px; font-weight: 500; line-height: 1.15; }
+.pe-quote-lead { margin: 0 0 48px; color: var(--muted-foreground); line-height: 1.55; max-width: 460px; }
+.pe-form { max-width: 640px; }
+.field select { border: 1px solid var(--border); background: var(--muted); border-radius: 999px; padding: 13px 16px; outline: none; font: inherit; color: var(--foreground); appearance: none; }
 .site-footer { background: var(--primary); color: var(--primary-foreground); padding: 86px 0 38px; }
 .site-footer-top { display: grid; grid-template-columns: 1.1fr 1fr 1fr auto; column-gap: 48px; align-items: start; }
 .site-footer-brand { font-weight: 200; font-size: 32px; line-height: 1; color: var(--primary-foreground); }
@@ -236,6 +253,12 @@ button { color: inherit; }
   .services-image { margin-top: 70px; }
   .contact-content { padding: 62px 0 80px; }
   .contact-image { height: 480px; }
+  .pe-teaser, .pe-products { padding: 72px 0; }
+  .pe-teaser h2, .pe-quote h2 { font-size: 32px; }
+  .pe-cards { grid-template-columns: 1fr; }
+  .pe-card { padding: 34px 26px 40px; }
+  .pe-card svg { margin-bottom: 40px; }
+  .pe-quote { padding: 72px 0 80px; }
   .site-footer { padding: 58px 0 30px; }
   .site-footer-top { grid-template-columns: 1fr; }
   .site-footer-links { flex-wrap: wrap; gap: 12px; margin-top: 22px; }

@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CasaVerdeRouteImport } from './routes/casa-verde'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
+import { Route as PowerEquipmentRouteImport } from './routes/power-equipment'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ServicesRouteImport } from './routes/services'
 
@@ -36,6 +37,11 @@ const ContactUsRoute = ContactUsRouteImport.update({
   path: '/contact-us',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PowerEquipmentRoute = PowerEquipmentRouteImport.update({
+  id: '/power-equipment',
+  path: '/power-equipment',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   id: '/privacy-policy',
   path: '/privacy-policy',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/casa-verde': typeof CasaVerdeRoute
   '/contact-us': typeof ContactUsRoute
+  '/power-equipment': typeof PowerEquipmentRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/casa-verde': typeof CasaVerdeRoute
   '/contact-us': typeof ContactUsRoute
+  '/power-equipment': typeof PowerEquipmentRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/casa-verde': typeof CasaVerdeRoute
   '/contact-us': typeof ContactUsRoute
+  '/power-equipment': typeof PowerEquipmentRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/casa-verde'
     | '/contact-us'
+    | '/power-equipment'
     | '/privacy-policy'
     | '/services'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/casa-verde'
     | '/contact-us'
+    | '/power-equipment'
     | '/privacy-policy'
     | '/services'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/casa-verde'
     | '/contact-us'
+    | '/power-equipment'
     | '/privacy-policy'
     | '/services'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CasaVerdeRoute: typeof CasaVerdeRoute
   ContactUsRoute: typeof ContactUsRoute
+  PowerEquipmentRoute: typeof PowerEquipmentRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
 }
@@ -138,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactUsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/power-equipment': {
+      id: '/power-equipment'
+      path: '/power-equipment'
+      fullPath: '/power-equipment'
+      preLoaderRoute: typeof PowerEquipmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy-policy': {
       id: '/privacy-policy'
       path: '/privacy-policy'
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CasaVerdeRoute: CasaVerdeRoute,
   ContactUsRoute: ContactUsRoute,
+  PowerEquipmentRoute: PowerEquipmentRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
 }
