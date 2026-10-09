@@ -12,10 +12,10 @@ export const Route = createFileRoute("/casa-verde")({
   },
   head: () => ({
     meta: [
-      { title: "Casa Verde Baterii 2026 — SENCON" },
-      { name: "description", content: "Calculează punctajul și finanțarea estimată pentru programul Casa Verde Baterii 2026." },
-      { property: "og:title", content: "Casa Verde Baterii 2026 — SENCON" },
-      { property: "og:description", content: "Simulator de punctaj, condiții de eligibilitate și documentele necesare pentru finanțarea AFM." },
+      { title: "Casa Verde Baterii 2026 — SENCON | Energy Consulting" },
+      { name: "description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
+      { property: "og:title", content: "Casa Verde Baterii 2026 — SENCON | Energy Consulting" },
+      { property: "og:description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
