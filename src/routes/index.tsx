@@ -29,10 +29,10 @@ const steps = [
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "SENCON — Empowering Energy" },
-    { name: "description", content: "SENCON shapes Romania’s energy landscape with end-to-end energy solutions." },
-    { property: "og:title", content: "SENCON — Empowering Energy" },
-    { property: "og:description", content: "End-to-end consulting, engineering, construction and maintenance for Romania’s energy sector." },
+    { title: "SENCON | Energy Consulting" },
+    { name: "description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
+    { property: "og:title", content: "SENCON | Energy Consulting" },
+    { property: "og:description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ]}), component: HomePage,

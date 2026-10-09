@@ -6,8 +6,8 @@ import cta from "../assets/services-cta.jpg.asset.json";
 
 export const Route = createFileRoute("/services")({
   head: () => ({ meta: [
-    { title: "Services — SENCON" }, { name: "description", content: "Consulting, development, engineering, construction, operations and maintenance for energy projects." },
-    { property: "og:title", content: "Services — SENCON" }, { property: "og:description", content: "Discover SENCON’s comprehensive energy services." },
+    { title: "Services — SENCON | Energy Consulting" }, { name: "description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
+    { property: "og:title", content: "Services — SENCON | Energy Consulting" }, { property: "og:description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ]}), component: ServicesPage,
 });

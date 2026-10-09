@@ -7,8 +7,8 @@ import secondaryImage from "../assets/about-secondary.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({ meta: [
-    { title: "About us — SENCON" }, { name: "description", content: "Learn about SENCON and our commitment to complete energy projects in Romania." },
-    { property: "og:title", content: "About us — SENCON" }, { property: "og:description", content: "Products, solutions and services dedicated to the energy field." },
+    { title: "About us — SENCON | Energy Consulting" }, { name: "description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
+    { property: "og:title", content: "About us — SENCON | Energy Consulting" }, { property: "og:description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ]}), component: AboutPage,
 });

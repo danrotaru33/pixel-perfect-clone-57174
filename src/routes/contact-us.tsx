@@ -6,8 +6,8 @@ import office from "../assets/contact-office.png.asset.json";
 
 export const Route = createFileRoute("/contact-us")({
   head: () => ({ meta: [
-    { title: "Contact us — SENCON" }, { name: "description", content: "Contact SENCON in Brașov to discuss your energy project." },
-    { property: "og:title", content: "Contact us — SENCON" }, { property: "og:description", content: "Our team is here to assist you toward a sustainable and efficient energy future." },
+    { title: "Contact us — SENCON | Energy Consulting" }, { name: "description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
+    { property: "og:title", content: "Contact us — SENCON | Energy Consulting" }, { property: "og:description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ]}), component: ContactPage,
 });

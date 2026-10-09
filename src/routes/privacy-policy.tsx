@@ -4,10 +4,10 @@ import { SiteFooter } from "../components/SiteFooter";
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({ meta: [
-    { title: "Privacy Policy — SENCON" },
-    { name: "description", content: "How SENCON SRL handles the personal data you share on this website." },
-    { property: "og:title", content: "Privacy Policy — SENCON" },
-    { property: "og:description", content: "How SENCON SRL handles the personal data you share on this website." },
+    { title: "Privacy Policy — SENCON | Energy Consulting" },
+    { name: "description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
+    { property: "og:title", content: "Privacy Policy — SENCON | Energy Consulting" },
+    { property: "og:description", content: "Sencon is a leading solar energy consulting firm specializing in innovative and sustainable solutions for residential, commercial, and industrial clients." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ]}), component: PrivacyPage,
