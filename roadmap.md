@@ -16,3 +16,8 @@
 - [x] Add Privacy Policy page and verify footer on desktop/mobile
 - [x] Hide Casa Verde from menus and its address until it is ready
 - [x] Update site page titles and meta descriptions
+
+- [x] Add /power-equipment page (hero, product cards, quote form)
+- [x] Add Power Equipment to main navigation
+- [x] Add homepage teaser block linking to /power-equipment
+- [ ] Verify page, form, nav and teaser on desktop/mobile and confirm clean logs
