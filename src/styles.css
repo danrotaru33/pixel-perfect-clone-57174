@@ -240,6 +240,10 @@ button { color: inherit; }
 .cv-official-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; }
 .cv-official p { margin: 0 0 28px; color: var(--muted-foreground); line-height: 1.6; }
 
+@media (max-width: 1100px) {
+  .pe-transformer-grid, .pe-reference-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 809px) {
   .shell, .site-nav, .office-feature { width: min(100% - 32px, 600px); }
   .site-nav { height: 76px; }
