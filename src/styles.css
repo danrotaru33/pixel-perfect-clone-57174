@@ -275,11 +275,13 @@ button { color: inherit; }
   .services-image { margin-top: 70px; }
   .contact-content { padding: 62px 0 80px; }
   .contact-image { height: 480px; }
-  .pe-teaser, .pe-products { padding: 72px 0; }
-  .pe-teaser h2, .pe-quote h2 { font-size: 32px; }
-  .pe-cards { grid-template-columns: 1fr; }
-  .pe-card { padding: 34px 26px 40px; }
-  .pe-card svg { margin-bottom: 40px; }
+  .pe-teaser, .pe-transformers, .pe-references { padding: 72px 0; }
+  .pe-teaser h2, .pe-quote h2, .pe-transformers h2, .pe-references h2, .pe-storage h2 { font-size: 32px; }
+  .pe-transformer-grid, .pe-reference-grid { grid-template-columns: 1fr; }
+  .pe-transformer-grid, .pe-references h2 { margin-bottom: 40px; }
+  .pe-storage { grid-template-columns: 1fr; }
+  .pe-storage-text { padding: 72px 16px; }
+  .pe-storage-media { min-height: 300px; }
   .pe-quote { padding: 72px 0 80px; }
   .site-footer { padding: 58px 0 30px; }
   .site-footer-top { grid-template-columns: 1fr; }
