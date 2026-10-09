@@ -91,7 +91,7 @@ function CasaVerdePage() {
 
         <section className="contact-band"><div className="shell contact-band-inner"><h2>Pregătit pentru următorul pas?</h2><div><p>Echipa SENCON te poate ajuta să alegi configurația potrivită și să pregătești proiectul pentru finanțare.</p><Link to="/contact-us" className="arrow-link">Contactează-ne <span>→</span></Link></div></div></section>
       </main>
-      <footer className="footer"><div className="shell footer-inner"><span>© SENCON 2026</span><span>Empowering Energy</span></div></footer>
+      <SiteFooter />
     </>
   );
 }
