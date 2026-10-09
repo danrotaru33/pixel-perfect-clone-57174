@@ -53,7 +53,7 @@ export const submitContactForm = createServerFn({ method: 'POST' })
       throw new Error('Please fill in your name, a valid email and a message.')
     }
 
-    checkRateLimit(getIp((await import('@tanstack/react-start/server')).getRequest()))
+    checkRateLimit(await getIp())
 
     await send(
       'contact-notification',
@@ -88,7 +88,7 @@ export const submitQuoteRequest = createServerFn({ method: 'POST' })
       throw new Error('Please fill in your name, a valid email and the product.')
     }
 
-    checkRateLimit(getIp((await import('@tanstack/react-start/server')).getRequest()))
+    checkRateLimit(await getIp())
 
     await send(
       'quote-request-notification',
