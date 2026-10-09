@@ -20,4 +20,4 @@
 - [x] Add /power-equipment page (hero, product cards, quote form)
 - [x] Add Power Equipment to main navigation
 - [x] Add homepage teaser block linking to /power-equipment
-- [ ] Verify page, form, nav and teaser on desktop/mobile and confirm clean logs
+- [x] Verify page, form, nav and teaser on desktop/mobile and confirm clean logs

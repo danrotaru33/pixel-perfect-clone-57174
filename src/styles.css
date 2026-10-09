@@ -81,7 +81,7 @@ button { color: inherit; }
 .contact-band-inner { display: grid; grid-template-columns: .8fr 1.2fr; gap: 110px; }
 .contact-band p { color: oklch(.76 0 0); margin: 0 0 32px; line-height: 1.6; }
 
-.page-hero { min-height: 430px; display: flex; align-items: flex-end; padding-bottom: 48px; background: var(--muted); }
+.page-hero { min-height: 430px; display: flex; align-items: flex-end; padding-top: 120px; padding-bottom: 48px; background: var(--muted); }
 .page-hero.dark { background: var(--primary); color: var(--primary-foreground); }
 .page-hero h1 { font-size: 46px; font-weight: 500; margin: 0 0 24px; }
 .page-hero p { color: var(--muted-foreground); line-height: 1.55; max-width: 440px; margin: 0; }
