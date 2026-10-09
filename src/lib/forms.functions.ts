@@ -20,12 +20,9 @@ function checkRateLimit(ip: string) {
   submissions.set(ip, recent)
 }
 
-function getIp(request: Request) {
-  return (
-    request.headers.get('cf-connecting-ip') ??
-    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
-    'unknown'
-  )
+async function getIp() {
+  const { getRequestIP } = await import('@tanstack/react-start/server')
+  return getRequestIP() ?? 'unknown'
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
